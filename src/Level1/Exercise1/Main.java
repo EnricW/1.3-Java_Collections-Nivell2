@@ -21,33 +21,31 @@ public class Main {
         year.add(new Month("November"));
         year.add(new Month("December"));
 
-        System.out.println("The year has " + year.size() + " months.");
-        System.out.println("The months are:");
-        for (Month month : year) {
-            System.out.println(month.getName()+" as month number "+(year.indexOf(month)+1));
-        }
+        printMonths(year);
 
         System.out.println("Adding August...");
         year.add(7, new Month("August"));
 
-        System.out.println("The year has " + year.size() + " months.");
-        System.out.println("The months are:");
-        for (Month month : year) {
-            System.out.println(month.getName()+" as month number "+(year.indexOf(month)+1));
-        }
+        printMonths(year);
 
         HashSet<Month> newYear = new HashSet<>(year);
 
-        System.out.println("The new year has " + newYear.size() + " months.");
-        System.out.println("The months are:");
-        Iterator<Month> it = newYear.iterator();
-        while (it.hasNext()){
-            System.out.println(it.next().getName()+" as month number "+(year.indexOf(it.next())+1));
-        }
+        System.out.println("Trying to add August again...");
+        newYear.add(new Month("August"));
+
         System.out.println("The new year has " + newYear.size() + " months.");
         System.out.println("The months are:");
         for (Month month : newYear) {
-            System.out.println(month.getName()+" as month number "+(year.indexOf(month)+1));
+            System.out.println(month.getName());
         }
+    }
+
+    private static void printMonths(ArrayList<Month> months) {
+        System.out.println("The year has " + months.size() + " months.");
+        System.out.println("The months are:");
+        for (Month month : months) {
+            System.out.println(month.getName() + " as month number " + (months.indexOf(month) + 1));
+        }
+        System.out.println();
     }
 }
