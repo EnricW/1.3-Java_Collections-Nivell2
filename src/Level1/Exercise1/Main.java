@@ -33,9 +33,11 @@ public class Main {
         System.out.println("Trying to add August again...");
         newYear.add(new Month("August"));
 
+        Iterator<Month> it = newYear.iterator();
         System.out.println("The new year has " + newYear.size() + " months.");
         System.out.println("The months are:");
-        for (Month month : newYear) {
+        while (it.hasNext()) {
+            Month month = it.next();
             System.out.println(month.getName());
         }
     }
