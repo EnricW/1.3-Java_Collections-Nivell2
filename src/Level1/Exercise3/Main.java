@@ -46,7 +46,12 @@ public class Main {
 
     private String getPlayerName() {
     System.out.print("Enter your name: ");
-    return scanner.nextLine();
+        String name = scanner.nextLine();
+        while (name.isEmpty()) {
+            System.out.print("Name cannot be empty. Please, enter your name: ");
+            name = scanner.nextLine();
+        }
+        return name;
     }
 
     private int startGame() {
