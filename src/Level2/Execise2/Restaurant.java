@@ -1,14 +1,22 @@
-package Level2.Execise1;
+package Level2.Execise2;
 
 import java.util.Objects;
 
-public class Restaurant {
+public class Restaurant implements Comparable<Restaurant>{
     public String name;
     public int rating;
 
     public Restaurant(String name, int rating) {
         this.name = name;
         this.rating = rating;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getRating() {
+        return rating;
     }
 
     public void display() {
@@ -26,5 +34,14 @@ public class Restaurant {
     @Override
     public int hashCode() {
         return Objects.hash(name, rating);
+    }
+
+    @Override
+    public int compareTo(Restaurant other) {
+        int nameComparison = this.name.compareTo(other.name);
+        if (nameComparison == 0) {
+            return Integer.compare(other.rating, this.rating);
+        }
+        return nameComparison;
     }
 }

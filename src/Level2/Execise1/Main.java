@@ -6,23 +6,34 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         HashSet<Restaurant> restaurants = new HashSet<>();
+        Scanner scanner = new Scanner(System.in);
 
         System.out.println("Add your favourite TOP 3 restaurants!");
-        Scanner scanner = new Scanner(System.in);
+
         for (int i = 0; i < 3; i++) {
             System.out.println("Enter the name of the restaurant:");
-            String name = scanner.nextLine();
-            System.out.println("Enter the rating of the restaurant:");
-            int rating = scanner.nextInt();
-            scanner.nextLine();
+            String name = scanner.nextLine().trim();
+            while (name.isEmpty()) {
+                System.out.print("Name cannot be empty. Please, enter the name of the restaurant: ");
+                name = scanner.nextLine().trim();
+            }
+
+            System.out.println("Enter the rating of the restaurant (1-10): ");
+            int rating = 0;
+            while (true) {
+                try {
+                    rating = Integer.parseInt(scanner.nextLine().trim());
+                    if (rating >= 1 && rating <= 10) break;
+                    System.out.print("Invalid rating! Please enter a number between 1 and 10: ");
+                } catch (NumberFormatException e) {
+                    System.out.print("Invalid input. Please enter a valid number between 1 and 10: ");
+                }
+            }
 
             Restaurant newRestaurant = new Restaurant(name, rating);
-
-            boolean alreadyExists = restaurants.stream().anyMatch(r -> r.name.equals(name) && r.rating == rating);
-
-            if (!alreadyExists) {
-                restaurants.add(newRestaurant);
-            } else {
+            if(restaurants.add(newRestaurant)){
+                System.out.println("Restaurant added!");
+            }else{
                 System.out.println("This restaurant is already in your list!");
                 i--;
             }
