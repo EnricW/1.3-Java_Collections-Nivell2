@@ -2,7 +2,7 @@
 
 ## 📄 Descripció - Enunciat de l'exercici
 
-Aquest projecte està format per dos nivells d'exercicis que exploren els conceptes d'excepcions en Java:
+Aquest projecte està format per 5 exercicis que exploren diferents col·leccions en Java:
 
 ### Nivell 1 ⭐
 #### Exercici 1: Mesos de l'any
