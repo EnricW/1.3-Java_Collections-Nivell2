@@ -8,9 +8,9 @@ public class Main {
         HashSet<Restaurant> restaurants = new HashSet<>();
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Add your favourite TOP 3 restaurants!");
+        System.out.println("Add your favourite TOP 5 restaurants!");
 
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < 5; i++) {
             System.out.println("Enter the name of the restaurant:");
             String name = scanner.nextLine().trim();
             while (name.isEmpty()) {
@@ -39,7 +39,6 @@ public class Main {
             }
         }
 
-        System.out.println("Your favourite restaurants are:");
         for (Restaurant restaurant : restaurants) {
             restaurant.display();
         }

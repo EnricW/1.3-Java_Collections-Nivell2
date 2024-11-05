@@ -8,7 +8,6 @@ public class Main {
     public static void main(String[] args) {
         ArrayList<Month> year = new ArrayList<Month>();
 
-        System.out.println("Adding months to the year...");
         year.add(new Month("January"));
         year.add(new Month("February"));
         year.add(new Month("March"));
@@ -23,19 +22,16 @@ public class Main {
 
         printMonths(year);
 
-        System.out.println("Adding August...");
         year.add(7, new Month("August"));
 
         printMonths(year);
 
         HashSet<Month> newYear = new HashSet<>(year);
 
-        System.out.println("Trying to add August again...");
         newYear.add(new Month("August"));
 
         Iterator<Month> it = newYear.iterator();
-        System.out.println("The new year has " + newYear.size() + " months.");
-        System.out.println("The months are:");
+        System.out.println("The new year has " + newYear.size() + " months:");
         while (it.hasNext()) {
             Month month = it.next();
             System.out.println(month.getName());
@@ -43,8 +39,7 @@ public class Main {
     }
 
     private static void printMonths(ArrayList<Month> months) {
-        System.out.println("The year has " + months.size() + " months.");
-        System.out.println("The months are:");
+        System.out.println("The year has " + months.size() + " months:");
         for (Month month : months) {
             System.out.println(month.getName() + " as month number " + (months.indexOf(month) + 1));
         }

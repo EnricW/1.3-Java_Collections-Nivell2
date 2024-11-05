@@ -39,7 +39,6 @@ public class Main {
             }
         }
 
-        System.out.println("Your favourite restaurants are:");
         for (Restaurant restaurant : restaurants) {
             restaurant.display();
         }
