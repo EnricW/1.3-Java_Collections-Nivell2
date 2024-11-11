@@ -31,6 +31,32 @@ Implementació d'un sistema de gestió de restaurants que permet emmagatzemar re
 
 Utilitzant la classe del programa anterior, crea la implementació necessària perquè els objectes de la classe Restaurant estiguin ordenats per nom i per puntuació en ordre descendent. 
 
+### Nivell 3 ⭐⭐⭐
+#### Exercici 1: Llistes en ordre
+
+Implementació d'un sistema de gestió de persones que llegeix dades d'un fitxer CSV i permet afegir i ordenar persones per nom, cognom o DNI, utilitzant ArrayList i Comparator per manipular les dades de manera flexible i eficient.
+
+Crea una aplicació capaç de llegir un fitxer CSV. Aquest fitxer té 3 camps: nom, cognom i DNI, per cada registre. Es tracta d’ordenar les persones llegides del fitxer, mitjançant el seu nom, cognom o DNI. Pots fer servir la llista que creguis més adient. La classe Persona té 3 atributs (nom, cognom, DNI).
+
+
+La classe principal té el següent menú:
+
+1.- Introduir persona.
+
+2.- Mostrar les persones ordenades per nom (A-Z).
+
+3.- Mostrar les persones ordenades per nom (Z-A).
+
+4.- Mostrar les persones ordenades per cognoms (A-Z).
+
+5.- Mostrar les persones ordenades per cognoms (Z-A).
+
+6.- Mostrar les persones ordenades per DNI (1-9).
+
+7.- Mostrar les persones ordenades per DNI (9-1).
+
+0.- Sortir.
+
 ## 💻 Tecnologies Utilitzades
 
 - Java SE Development Kit (JDK) 17
