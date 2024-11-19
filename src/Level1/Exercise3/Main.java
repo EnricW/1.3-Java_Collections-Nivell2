@@ -34,8 +34,9 @@ public class Main {
             while ((line = br.readLine()) != null) {
                 String[] parts = line.split(" ", 2);
                 if (parts.length >= 2) {
-                    String country = parts[0];
-                    String capital = parts[1];
+                    String country = parts[0].replace("_", " ");
+                    String capital = parts[1].replace("_", " ");
+
                     countriesMap.put(country, capital);
                 }
             }
