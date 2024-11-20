@@ -3,8 +3,8 @@ package Level2.Execise1;
 import java.util.Objects;
 
 public class Restaurant {
-    public String name;
-    public int rating;
+    private String name;
+    private int rating;
 
     public Restaurant(String name, int rating) {
         this.name = name;
